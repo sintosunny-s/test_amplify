@@ -27,3 +27,5 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
           SONAR_HOST_URL: https://sonarqube.smeamaze.com
+          SONAR_PROJECT_KEY: test_amplify
+          SONAR_PROJECT_NAME: Test Amplify
