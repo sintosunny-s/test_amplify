@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - master
+
+
+jobs:
+  deploy:
+    name: Deploy to EC2
+    runs-on: [self-hosted, linux, x64, test_amplify]
+
+    steps:
+      - name: Checkout code to sandboxed path
+        uses: actions/checkout@v4
+        with:
+          path: repo
+
+      - name: Copy code to /app/DATA
+        run: |
+          sudo rm -rf /app/DATA/*
+          sudo cp -r repo/* /app/DATA/
