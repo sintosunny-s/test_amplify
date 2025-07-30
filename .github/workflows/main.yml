@@ -16,4 +16,4 @@ jobs:
       - name: Copy code to /app/DATA
         run: |
           sudo rm -rf /actioncheck/DATA/*
-          sudo cp -r repo/* /home/ubuntu/actioncheck/DATA/
+          sudo cp -r repo/* /home/ubuntu/actioncheck/DATA
